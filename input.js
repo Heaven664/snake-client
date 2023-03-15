@@ -1,3 +1,7 @@
+const readline = require('readline');
+
+
+
 let connection;
 
 const setupInput = function(conn) {
@@ -11,7 +15,7 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = function(key) {
-  // If Control + C pressed exits the programm
+  // If Control + C pressed exits the program
   if (key === '\u0003') {
     process.exit();
   }
@@ -27,6 +31,12 @@ const handleUserInput = function(key) {
   if (key === 'd') {
     connection.write("Move: right");
   }
+  if (key === 'h') {
+    connection.write("Say: hi");
+  }
 };
+
+
+
 
 module.exports = setupInput;
